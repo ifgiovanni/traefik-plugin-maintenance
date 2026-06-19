@@ -1,0 +1,12 @@
+displayName: Maintenance Mode
+type: middleware
+import: github.com/tu-org/traefik-plugin-maintenance
+summary: "Shows a maintenance screen while a service restarts or updates, by querying an external status service."
+testData:
+  serviceName: demo
+  stateUrl: http://maintenance-state:8080
+  pollIntervalSeconds: 5
+  cacheSeconds: 3
+  failOpen: true
+  title: "We are updating this service"
+  message: "We'll be back shortly."
